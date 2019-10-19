@@ -5,10 +5,11 @@ public class Contact {
     private String birth, telephone, name;
 
     public Contact(String birth, String telephone, String name) {
-        this.birth = dateFormat(birth);
+        this.birth = birth;
         this.telephone = telephone;
         this.name = name;
     }
+
 
     private String dateFormat(String date){
         String[] parts = date.split("-");
@@ -22,7 +23,7 @@ public class Contact {
     }
 
     public String getBirth() {
-        return birth;
+        return dateFormat(birth);
     }
 
     public void setBirth(String birth) {
