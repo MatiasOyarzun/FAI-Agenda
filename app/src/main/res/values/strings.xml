@@ -15,7 +15,7 @@
     <string name="contact_profile">Contact Profile</string>
     <string name="birth">Birth: dd/mm/aaaa</string>
     <string name="new_contact">New Contact</string>
-    <string name="copyright">©Rodrigo Chavez - Matias Oyarzun </string>
+    <string name="copyright">© Rodrigo Chavez - Matias Oyarzun </string>
     <string name="toast_birth">No birthday in</string>
     <string name="toast_add_contact">Contact loaded successfully</string>
     <string name="toast_fields">Name and phone number are required</string>

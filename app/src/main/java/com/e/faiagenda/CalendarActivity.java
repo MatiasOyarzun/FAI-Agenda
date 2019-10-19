@@ -65,7 +65,7 @@ public class CalendarActivity extends AppCompatActivity {
             }
             cumpleañeros.setText(pibes);
         }else{
-            Toast.makeText(getApplicationContext(), getString(R.string.toast_birth)+dayOfMonth+"/"+month, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.toast_birth)+" "+dayOfMonth+"/"+month, Toast.LENGTH_SHORT).show();
         }
         dbContacts.close();
     }
