@@ -64,13 +64,11 @@ public class AddContact extends AppCompatActivity {
 
         String name = et_name.getText().toString();
         String telephone = et_telephone.getText().toString();
-        String birth;
+        String birth = et_birth.getText().toString();
 
         if(!name.isEmpty() && !telephone.isEmpty()){
             ContentValues registro = new ContentValues();
-            if(et_birth.getText() != null && !et_birth.getText().equals("")){
-                birth =  et_birth.getText().toString();
-
+            if(birth!= null && !birth.isEmpty()){
                 //Cambia formato de la fecha a formato de sqlite
                 birth = dateFormat(birth);
             }else{

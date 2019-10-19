@@ -5,9 +5,20 @@ public class Contact {
     private String birth, telephone, name;
 
     public Contact(String birth, String telephone, String name) {
-        this.birth = birth;
+        this.birth = dateFormat(birth);
         this.telephone = telephone;
         this.name = name;
+    }
+
+    private String dateFormat(String date){
+        String[] parts = date.split("-");
+        String day, month, year;
+
+        day = parts[2];
+        month = parts[1];
+        year = parts[0];
+
+        return day+"-"+month+"-"+year;
     }
 
     public String getBirth() {
@@ -36,9 +47,6 @@ public class Contact {
 
     @Override
     public String toString() {
-
-
-
         return  "Nombre: " + name + " - "
                 +"Telefono: "+ telephone + "\n"
                 +"Cumpleaños: " + birth;
