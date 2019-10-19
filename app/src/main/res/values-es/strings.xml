@@ -14,7 +14,7 @@
     <string name="birthday">Cumpleaño: </string>
     <string name="birth">Nacimiento: dd/mm/aaaa</string>
     <string name="contact_profile">Perfil de Contacto</string>
-    <string name="copyright">©Rodrigo Chavez - Matias Oyarzun </string>
+    <string name="copyright">© Rodrigo Chavez - Matias Oyarzun </string>
     <string name="new_contact">Nuevo Contacto</string>
     <string name="toast_birth">No hay cumpleaños en </string>
     <string name="toast_add_contact">Contacto cargado con exito</string>
