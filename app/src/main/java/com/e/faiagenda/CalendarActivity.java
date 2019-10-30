@@ -55,7 +55,7 @@ public class CalendarActivity extends AppCompatActivity {
 
         if(tableContacts.moveToFirst()){
             do {
-                contacts.add(new Contact(tableContacts.getString(3), tableContacts.getString(2), tableContacts.getString(1)));
+                contacts.add(new Contact(tableContacts.getString(2), tableContacts.getString(1), tableContacts.getString(0)));
             } while (tableContacts.moveToNext());
             String pibes = getString(R.string.calendar_text);
             for (int i=0; i<contacts.size(); i++){
@@ -65,6 +65,7 @@ public class CalendarActivity extends AppCompatActivity {
             }
             cumpleañeros.setText(pibes);
         }else{
+            cumpleañeros.setText("");
             Toast.makeText(getApplicationContext(), getString(R.string.toast_birth)+" "+dayOfMonth+"/"+month, Toast.LENGTH_SHORT).show();
         }
         dbContacts.close();

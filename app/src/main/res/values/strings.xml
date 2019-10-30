@@ -24,4 +24,5 @@
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_confirm">Confirm</string>
     <string name="toast_delete_confirmed">Successfully Removed</string>
+    <string name="existing_contact">Existing Contact</string>
 </resources>

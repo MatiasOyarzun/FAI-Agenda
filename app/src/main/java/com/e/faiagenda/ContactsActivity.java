@@ -62,7 +62,7 @@ public class ContactsActivity extends AppCompatActivity {
 
         if (tableContacts.moveToFirst()) {
             do {
-                contacts.add(new Contact(tableContacts.getString(3), tableContacts.getString(2), tableContacts.getString(1)));
+                contacts.add(new Contact(tableContacts.getString(2), tableContacts.getString(1), tableContacts.getString(0)));
             } while (tableContacts.moveToNext());
         }
 

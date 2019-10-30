@@ -14,7 +14,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table contact(idContact integer primary key autoincrement, name varchar(20), telephone varchar(20), birth date)");
+        db.execSQL("create table contact(name varchar(20), telephone varchar(20) primary key, birth date)");
     }
 
     @Override

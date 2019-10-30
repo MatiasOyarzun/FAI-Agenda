@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.InputType;
@@ -77,8 +78,15 @@ public class AddContact extends AppCompatActivity {
             registro.put("name",name);
             registro.put("telephone",telephone);
             registro.put("birth",birth);
-            dbContacts.insert("contact",null, registro);
-            dbContacts.close();
+            Cursor tableContacts = dbContacts.rawQuery("select * from contact where telephone="+telephone, null);
+
+            if(!tableContacts.moveToFirst()){
+                dbContacts.insert("contact",null, registro);
+                dbContacts.close();
+            }else{
+                Toast.makeText(this, getString(R.string.existing_contact), Toast.LENGTH_LONG).show();
+            }
+
             et_birth.setText("");
             et_name.setText("");
             et_telephone.setText("");
